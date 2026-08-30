@@ -7,3 +7,6 @@ venv/
 
 # Raw per-day bhavcopy cache is rebuildable - keep it out of git.
 data/bhav/*.parquet
+
+st_out.log
+st_err.log
