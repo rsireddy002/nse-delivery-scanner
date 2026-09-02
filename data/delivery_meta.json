@@ -1,7 +1,7 @@
 {
-  "trade_date": "2026-09-01",
-  "generated_at_ist": "2026-09-01T23:00:56.796435+05:30",
-  "rows": 1444,
+  "trade_date": "2026-09-02",
+  "generated_at_ist": "2026-09-02T23:01:55.355148+05:30",
+  "rows": 1421,
   "baseline_sessions": 5,
   "series": [
     "EQ"
