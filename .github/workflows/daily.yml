@@ -25,14 +25,17 @@ jobs:
       - name: Fetch bhavcopy
         run: python precompute.py
 
+      - name: Fetch F&O open interest
+        run: python precompute_oi.py
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/delivery_latest.parquet data/delivery_meta.json
+          git add data/delivery_latest.parquet data/delivery_meta.json data/oi_latest.parquet data/oi_meta.json
           if git diff --staged --quiet; then
             echo "No new data - nothing to commit"
           else
-            git commit -m "delivery snapshot $(date +%d-%b)"
+            git commit -m "daily snapshot $(date +%d-%b)"
             git push
           fi
